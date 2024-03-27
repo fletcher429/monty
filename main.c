@@ -1,4 +1,5 @@
 #include "monty.h"
+
 /**
  * main - the entry point of the program
  * @argc: the argument counter
@@ -21,11 +22,11 @@ int main(int argc, char *argv[])
 
 	}
 
-	file = fopen(argv[1], "r") /*open the file for read only*/
+	file = fopen(argv[1], "r"); /*open the file for read only*/
 
 	if (file == NULL)
 	{
-		fprintf(stderr, " Error: Can't open file <file>\n")
+		fprintf(stderr, " Error: Can't open file <file>\n");
 		exit(EXIT_FAILURE);
 	}
 
