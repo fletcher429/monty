@@ -39,7 +39,7 @@ int main(int argc, char *argv[])
 
 	free(line);
 	fclose(file);
-	/*Free the stack - do not forget that*/
+	
 	return (EXIT_SUCCESS);
 
 

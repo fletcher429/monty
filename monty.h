@@ -3,7 +3,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <stderr.h>
 #include <limits.h>
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -35,6 +34,7 @@ typedef struct instruction_s
 } instruction_t;
 
 int main(int argc, char **argv);
+int search_opcode(stack_t **stack, char *opcod, unsigned int line_number);
 
 
 #endif
