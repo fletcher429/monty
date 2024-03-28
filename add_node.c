@@ -20,9 +20,6 @@ stack_t *add_node(stack_t **stack, int value)
         exit(EXIT_FAILURE);
     }
 
-    new_node->n = value;
-    new_node->prev = NULL;
-
     if (*stack)
     {
         new_node->next = *stack;
