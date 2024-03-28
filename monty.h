@@ -1,9 +1,12 @@
 #ifndef MONTY_H
 #define MONTY_H
+#define _GNU_SOURCE
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <limits.h>
+#include <string.h>
+#include <ctype.h>
+
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -37,7 +40,8 @@ int main(int argc, char **argv);
 int search_opcode(stack_t **stack, char *opcod, unsigned int line_number);
 stack_t *create_node(int n);
 stack_t *add_node(stack_t **stack, int value);
+int get_opc(stack_t **stack, char *opcode, unsigned int line_number);
+void push(stack_t **stack, unsigned int line_number);
 
 
 #endif
-
