@@ -16,6 +16,7 @@ int get_opc(stack_t **stack, char *opcode, unsigned int line_number)
 	instruction_t i[] = 
 	{
 		{"push", push},
+		{"pall", pall},
 
 		/*{"pall", pall},*/
 		{NULL, NULL}
@@ -25,7 +26,7 @@ int get_opc(stack_t **stack, char *opcode, unsigned int line_number)
 
 	while (i[j].opcode)
 	{
-		if (strcmp(opcode, i[j].opcode == 0))
+		if (strcmp(opcode, i[j].opcode) == 0)
 		{
 			i[j].f(stack, line_number);
 			return (0);

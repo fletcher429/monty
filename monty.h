@@ -36,7 +36,7 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-int main(int argc, char **argv);
+int main(int argc, char *argv[]);
 int search_opcode(stack_t **stack, char *opcod, unsigned int line_number);
 stack_t *create_node(int n);
 stack_t *add_node(stack_t **stack, int value);
@@ -44,4 +44,6 @@ int get_opc(stack_t **stack, char *opcode, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
 void clear(stack_t **stack);
 void free_s(stack_t **stack);
+int execute(stack_t **stack, char *opcode, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
 #endif
