@@ -35,6 +35,8 @@ typedef struct instruction_s
 
 int main(int argc, char **argv);
 int search_opcode(stack_t **stack, char *opcod, unsigned int line_number);
+stack_t *create_node(int n);
+stack_t *add_node(stack_t **stack, int value);
 
 
 #endif
