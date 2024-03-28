@@ -6,22 +6,19 @@
  */
 void swap(stack_t **stack, unsigned int line_number)
 {
-	stack_t *first = *stack;
-	stack_t *second = first->next;
+	stack_t *temp;
 
-	if ((*stack) == NULL || (*stack)->next == NULL)
+	if (*stack == NULL || (*stack)->next == NULL)
 	{
-		fprintf(stderr, "L%u: can't swap, stack too short", line_number);
+		fprintf(stderr, "L%u: can't swap, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
 	}
-	first->next = second->next;
-
-	if (second->next != NULL)
-	{
-		second->next->prev = first;
-	}
-	second->prev = NULL;
-	second->next = first;
-	first->prev = second;
-
-	*stack = second;
+	temp = (*stack)->next;
+	(*stack)->next = temp->next;
+	if (temp->next != NULL)
+		temp->next->prev = *stack;
+	temp->prev = NULL;
+	temp->next = *stack;
+	(*stack)->prev = temp;
+	*stack = temp;
 }
