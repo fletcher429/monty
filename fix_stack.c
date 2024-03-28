@@ -17,3 +17,13 @@ void clear(stack_t **stack)
 	}
 	*stack = NULL;
 }
+
+/**
+ * free - frees the stack
+ * @stack - stack to be free
+ * Return: void
+ */
+void free_s(stack_t **stack)
+{
+	clear(stack);
+}

@@ -43,5 +43,5 @@ stack_t *add_node(stack_t **stack, int value);
 int get_opc(stack_t **stack, char *opcode, unsigned int line_number);
 void push(stack_t **stack, unsigned int line_number);
 void clear(stack_t **stack);
-
+void free_s(stack_t **stack);
 #endif
